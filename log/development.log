@@ -1,0 +1,453 @@
+Started GET "/" for 127.0.0.1 at 2023-02-21 21:34:33 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/3.2.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 604)
+Completed 200 OK in 25ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 5029)
+
+
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20230222033816)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230222033816"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-22 03:41:08.892901"], ["updated_at", "2023-02-22 03:41:08.892901"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My Neighbor Totoro"], ["rating", "G"], ["description", nil], ["release_date", "1988-04-16 00:00:00"], ["created_at", "2023-02-22 14:11:06.352033"], ["updated_at", "2023-02-22 14:11:06.352033"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Green Book"], ["rating", "PG-13"], ["description", nil], ["release_date", "2018-11-16 00:00:00"], ["created_at", "2023-02-22 14:11:06.359465"], ["updated_at", "2023-02-22 14:11:06.359465"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Parasite"], ["rating", "R"], ["description", nil], ["release_date", "2019-05-30 00:00:00"], ["created_at", "2023-02-22 14:11:06.363606"], ["updated_at", "2023-02-22 14:11:06.363606"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nomadland"], ["rating", "R"], ["description", nil], ["release_date", "2021-02-19 00:00:00"], ["created_at", "2023-02-22 14:11:06.367642"], ["updated_at", "2023-02-22 14:11:06.367642"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "CODA"], ["rating", "PG-13"], ["description", nil], ["release_date", "2021-08-13 00:00:00"], ["created_at", "2023-02-22 14:11:06.375416"], ["updated_at", "2023-02-22 14:11:06.375416"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Life is Beautiful"], ["rating", "PG-13"], ["description", nil], ["release_date", "1998-10-23 00:00:00"], ["created_at", "2023-02-22 21:01:39.321882"], ["updated_at", "2023-02-22 21:01:39.321882"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Prestige"], ["rating", "PG-13"], ["description", nil], ["release_date", "2006-10-20 00:00:00"], ["created_at", "2023-02-22 21:01:39.328381"], ["updated_at", "2023-02-22 21:01:39.328381"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Good Will Hunting"], ["rating", "R"], ["description", nil], ["release_date", "1997-12-05 00:00:00"], ["created_at", "2023-02-22 21:01:39.332348"], ["updated_at", "2023-02-22 21:01:39.332348"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Beautiful Mind"], ["rating", "PG-13"], ["description", nil], ["release_date", "2001-12-13 00:00:00"], ["created_at", "2023-02-22 21:01:39.336022"], ["updated_at", "2023-02-22 21:01:39.336022"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Before Sunrise"], ["rating", "R"], ["description", nil], ["release_date", "1995-01-27 00:00:00"], ["created_at", "2023-02-22 21:01:39.339912"], ["updated_at", "2023-02-22 21:01:39.339912"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Life is Beautiful"], ["rating", "PG-13"], ["description", nil], ["release_date", "1998-10-23 00:00:00"], ["created_at", "2023-02-22 21:09:01.257280"], ["updated_at", "2023-02-22 21:09:01.257280"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Prestige"], ["rating", "PG-13"], ["description", nil], ["release_date", "2006-10-20 00:00:00"], ["created_at", "2023-02-22 21:09:01.264036"], ["updated_at", "2023-02-22 21:09:01.264036"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Good Will Hunting"], ["rating", "R"], ["description", nil], ["release_date", "1997-12-05 00:00:00"], ["created_at", "2023-02-22 21:09:01.267652"], ["updated_at", "2023-02-22 21:09:01.267652"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Beautiful Mind"], ["rating", "PG-13"], ["description", nil], ["release_date", "2001-12-13 00:00:00"], ["created_at", "2023-02-22 21:09:01.271290"], ["updated_at", "2023-02-22 21:09:01.271290"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Before Sunrise"], ["rating", "R"], ["description", nil], ["release_date", "1995-01-27 00:00:00"], ["created_at", "2023-02-22 21:09:01.274746"], ["updated_at", "2023-02-22 21:09:01.274746"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Life Is Beautiful"], ["rating", "PG-13"], ["description", nil], ["release_date", "1998-10-23 00:00:00"], ["created_at", "2023-02-22 21:11:11.837142"], ["updated_at", "2023-02-22 21:11:11.837142"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Prestige"], ["rating", "PG-13"], ["description", nil], ["release_date", "2006-10-20 00:00:00"], ["created_at", "2023-02-22 21:11:11.842214"], ["updated_at", "2023-02-22 21:11:11.842214"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Good Will Hunting"], ["rating", "R"], ["description", nil], ["release_date", "1997-12-05 00:00:00"], ["created_at", "2023-02-22 21:11:11.845810"], ["updated_at", "2023-02-22 21:11:11.845810"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Beautiful Mind"], ["rating", "PG-13"], ["description", nil], ["release_date", "2001-12-13 00:00:00"], ["created_at", "2023-02-22 21:11:11.849347"], ["updated_at", "2023-02-22 21:11:11.849347"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Before Sunrise"], ["rating", "R"], ["description", nil], ["release_date", "1995-01-27 00:00:00"], ["created_at", "2023-02-22 21:11:11.852903"], ["updated_at", "2023-02-22 21:11:11.852903"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Life Is Beautiful"], ["rating", "PG-13"], ["description", nil], ["release_date", "1998-10-23 00:00:00"], ["created_at", "2023-02-22 21:16:08.367277"], ["updated_at", "2023-02-22 21:16:08.367277"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Prestige"], ["rating", "PG-13"], ["description", nil], ["release_date", "2006-10-20 00:00:00"], ["created_at", "2023-02-22 21:16:08.373079"], ["updated_at", "2023-02-22 21:16:08.373079"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Good Will Hunting"], ["rating", "R"], ["description", nil], ["release_date", "1997-12-05 00:00:00"], ["created_at", "2023-02-22 21:16:08.376627"], ["updated_at", "2023-02-22 21:16:08.376627"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "A Beautiful Mind"], ["rating", "PG-13"], ["description", nil], ["release_date", "2001-12-13 00:00:00"], ["created_at", "2023-02-22 21:16:08.381003"], ["updated_at", "2023-02-22 21:16:08.381003"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Before Sunrise"], ["rating", "R"], ["description", nil], ["release_date", "1995-01-27 00:00:00"], ["created_at", "2023-02-22 21:16:08.384554"], ["updated_at", "2023-02-22 21:16:08.384554"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-02-22 15:18:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:18:45 -0600
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 1.1ms | Allocations: 379)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.5ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 10860)
+  Rendered layout layouts/application.html.erb (Duration: 627.6ms | Allocations: 100457)
+Completed 200 OK in 673ms (Views: 649.2ms | ActiveRecord: 1.6ms | Allocations: 103707)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2023-02-22 15:19:00 -0600
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/_movie.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered movies/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2924)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 5568)
+
+
+Started DELETE "/movies/1" for 127.0.0.1 at 2023-02-22 15:19:01 -0600
+Processing by MoviesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mMovie Destroy (2.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms | Allocations: 2787)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:19:01 -0600
+Processing by MoviesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4596)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6702)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 7020)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2023-02-22 15:19:03 -0600
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 575)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2673)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 3425)
+
+
+Started DELETE "/movies/2" for 127.0.0.1 at 2023-02-22 15:19:04 -0600
+Processing by MoviesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms | Allocations: 2419)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:19:04 -0600
+Processing by MoviesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4379)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6486)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 6758)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2023-02-22 15:19:06 -0600
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2678)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 3418)
+
+
+Started DELETE "/movies/3" for 127.0.0.1 at 2023-02-22 15:19:07 -0600
+Processing by MoviesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 15ms (ActiveRecord: 1.4ms | Allocations: 2393)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:19:07 -0600
+Processing by MoviesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4229)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 6349)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.2ms | Allocations: 6621)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2023-02-22 15:19:09 -0600
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 578)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2677)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3418)
+
+
+Started DELETE "/movies/4" for 127.0.0.1 at 2023-02-22 15:19:10 -0600
+Processing by MoviesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms | Allocations: 2402)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:19:10 -0600
+Processing by MoviesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4064)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6169)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6440)
+
+
+Started GET "/movies/5" for 127.0.0.1 at 2023-02-22 15:19:12 -0600
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/_movie.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 572)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2669)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3409)
+
+
+Started DELETE "/movies/5" for 127.0.0.1 at 2023-02-22 15:19:13 -0600
+Processing by MoviesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:63:in `set_movie'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/movies
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms | Allocations: 2405)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-22 15:19:13 -0600
+Processing by MoviesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:6
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered movies/_movie.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered movies/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3911)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6017)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 6288)
+
+
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
