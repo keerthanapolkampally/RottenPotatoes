@@ -1,24 +1,5 @@
-# README
+# Rotten Potatoes App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the rotten potatoes app built on ruby on rails.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Keerthana_Polkampally_HW2.txt has the link of the heroku deployed site.
